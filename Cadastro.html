@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html Lang= "pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content-"width=device-width, initial-scale-1.0">
+  <title> cadastro - vagas de emprego</title>
+</head> 
+
+<body>
+    <img src="imagens/logo.jpeg" alt="Logo do Itau">
+    <a href="index.html"><b>início</b></a>
+  <header>
+    <h1> quero trabalhar </h1>
+  </header>
+    <p> Preencha seus dados.
+      <hr>
+Todos os campos marcados com (*) é de Preenchimento obrigatório.</p>
+    <hr>
+    <main>
+  <section>
+    <header>
+      <h3> Primeira seção: Dados pessoais</h3>
+    </header>
+    <div>
+<form id="formulario" method="post">
+  <div>
+    <fieldset>
+<label for="nome">Nome *</label>
+<input type="text" id="nome" name="nome" placeholder="digite seu Nome">
+    </fieldset>
+</div>
+<div>
+  <fieldset>
+<label for="sobrenome">sobrenome *</label>
+<input type="text" id="sobrenome" name="sobrenome" placeholder="digite seu sobrenome">
+  </fieldset>
+</div>
+<div>
+  <fieldset>
+  <label for="genero">Como você se identifica? * </label>
+  <select id="genero" name="genero" required="required">
+    <option id="mulher">Feminino</option>
+    <option id="Homem">masculino</option>
+    <option id="outros">outros</option>
+</select>
+  </fieldset>
+</div>
+<div>
+  <fieldset>
+  <label for="aniversario"> Data de nascimento </label>
+<input type="date" id="nascimento" name="nascimento">
+</fieldset>
+</div>
+<div>
+  <fieldset>
+  <label for="CPF"> CPF *</label>
+  <input type="text" id="CPF" name="CPF" placeholder="digite o seu CPF" data-mask="000.000.000-00" data-mask-selectonfocus="true" onblur="testaCPF(this.value)">
+  </fieldset>
+</div>
+<div<
+  <fieldset>
+<label for="RG"> RG *</label>
+  <input type="text" id="RG" name="RG" placeholder="digite o seu RG"required="required">
+  </fieldset>
+  </div>
+  </section>
+  <section>
+    <header>
+<h3>Segunda seção: endereço</h3>
+    </header>
+<div>
+  <fieldset>
+  <label for="Cep">Cep * </label>
+  <input type="text" id"Cep" name="Cep"required="required" onblur="pesquisacep(this.value)">
+  </fieldset>
+</div>
+<div>
+  <fieldset>
+  <label for="rua"> Rua *</label>
+  <input type="text" id="rua" name="rua" placeholder="digite o Nome da rua ou avenida">
+</fieldset>
+</div>
+<div>
+  <fieldset>
+  <label for="numero"> Número * </label>
+  <input type="number" id="numero" name="numero" placeholder="úmero">
+  </fieldset>
+</div>
+<div>
+  <fieldset>
+    <label for="Bairro"> Bairro * </label>
+  <input type="text" id="bairro" name="Bairro" placeholder="Bairro">
+  </fieldset>
+</div>
+<div>
+  <fieldset>
+  <label for="Cidade"> Cidade * </label>
+  <input type="text" id="cidade" name="Cidade" placeholder="insira a Cidade">
+</fieldset>
+</div>
+<div>
+  <fieldset>
+  <label for="Estado"> Estado*  </label>
+  <input type="text" id="estado" name="Estado" placeholder="digite o Estado">
+</fieldset>
+</div>
+<fieldset>
+  <label for="IBGE"> IBGE </label>
+  <input type="text" id="IBGE" name="IBGE">
+</fieldset>
+</div>
+  </section>
+  <section>
+    <header>
+<h3>Terceira seção: dados complementares:</h3>
+</header>
+<div>
+  <fieldset>
+  <label for="formação"> Qual é sua formação? </label>
+  <select id="formação" name="formação">
+  <option id=" name= id="ensino fundamental incompleto">ensino fundamental incompleto</option>
+ <option id="ensino fundamental completo">ensino fundamental completo</option>
+ <option id="ensino médio incompleto">ensino médio incompleto</option>
+ <option id="ensino médio completo">ensino médio completo</option>
+<option id="ensino superior incompleto">ensino superior incompleto</option>
+<option id"ensino superior completo">ensino superior completo</option>
+  </select>
+</fieldset>
+</div>
+<div>
+  <fieldset>
+  <label for="deficiência"> É pessoa com deficiência?</label>
+  <select id="deficiência" name="deficiência">
+    <option id="sim">sim</option>
+  <option id="não">não</option>
+  </select>
+  </fieldset>
+ </div>
+<div>
+  <fieldset>
+  <label for="Deficiência">Se sim, marque o tipo da Deficiência </label>
+<select id="Deficiência" name="Deficiência">
+  <option id="Deficiência auditiva">Deficiência auditiva</option>
+  <option id="deficiência física">deficiência física</option>
+  <option id="deficiência intelectual">deficiência intelectual</option>
+  <option id="deficiência visual">deficiência visual</option>
+  <option id="outras deficiências">outras deficiências>/option>
+</select>
+  </fieldset>
+</div>
+    <div>
+      <fieldset>
+<label for="laudo"> Insira seu laudo </label>
+<input type="file" id="arquivo" name="arquivo"multiple>
+</fieldset>
+</div>
+<div>
+  <fieldset>
+<label for="experiência"> Possui alguma experiência profissional? </label>
+<select id="experiência" name="experiência">
+  <option id="sim">sim</option>
+  >option id="não">não</option>
+</select>
+</fieldset>
+</div>
+<div>
+  <fieldset>
+<label for="currículo"> Ensira seu currículo.</label>
+<input type="file" id="arquivo" name="arquivo" multiple>
+</fieldset>
+</div>
+  </section>
+  <section>
+    <header>
+  <h3>Quarta seção: Contato</h3>
+    </header>
+  <div>
+    <fieldset>
+<label for="telefone"> Telefone celular * </label>
+<input type="tel" id="telefone celular" name="telefone celular" placeholder=  "telefone" required="required" minlength="="9" maxlength="="9">
+</fieldset>
+  </div>
+<div>
+  <fieldset>
+<label for="email"> E-mail *</label>
+<input type="text" id="email" name="email" placeholder="digite seu e-mail no formato xxx@exemplo.com">
+</fieldset>
+</div>
+<input name="enviar" id="enviar" type="submit" onclick="return validar();">
+<input name="limpar" id="limpar" type="reset">
+</form>
+</div>
+</section>
+    </main>
+</body>
+<script src="js/dados.js"></script>
+</html>
