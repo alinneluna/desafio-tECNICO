@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content-"width=device-width, initial-scale-1.0">
+  <link rel="stylesheet" href="css/estilo.css" type="text/css">
   <title> cadastro - vagas de emprego</title>
 </head> 
 
@@ -22,22 +23,21 @@ Todos os campos marcados com (*) é de Preenchimento obrigatório.</p>
       <h3> Primeira seção: Dados pessoais</h3>
     </header>
     <div>
-<form id="formulario" method="post">
-  <div>
+<form id="formulario" method="post" action="" class="formulario">
     <fieldset>
-<label for="nome">Nome *</label>
+<label for="nome"> <strong>Nome *</strong></label>
 <input type="text" id="nome" name="nome" placeholder="digite seu Nome">
     </fieldset>
 </div>
-<div>
+<div class="campo">
   <fieldset>
-<label for="sobrenome">sobrenome *</label>
+<label for="sobrenome"><strong> sobrenome * </strong></label>
 <input type="text" id="sobrenome" name="sobrenome" placeholder="digite seu sobrenome">
   </fieldset>
 </div>
-<div>
+<div class="group">
   <fieldset>
-  <label for="genero">Como você se identifica? * </label>
+  <label for="genero"><strong>Como você se identifica? * </strong></label>
   <select id="genero" name="genero" required="required">
     <option id="mulher">Feminino</option>
     <option id="Homem">masculino</option>
@@ -45,21 +45,21 @@ Todos os campos marcados com (*) é de Preenchimento obrigatório.</p>
 </select>
   </fieldset>
 </div>
-<div>
+<div class="group">
   <fieldset>
-  <label for="aniversario"> Data de nascimento </label>
+  <label for="aniversario"><strong>Data de nascimento </strong></label>
 <input type="date" id="nascimento" name="nascimento">
 </fieldset>
 </div>
-<div>
+<div class="campo">
   <fieldset>
-  <label for="CPF"> CPF *</label>
+  <label for="CPF"><strong>CPF *</strong></label>
   <input type="text" id="CPF" name="CPF" placeholder="digite o seu CPF" data-mask="000.000.000-00" data-mask-selectonfocus="true" onblur="testaCPF(this.value)">
   </fieldset>
 </div>
-<div<
+<div class="campo"<
   <fieldset>
-<label for="RG"> RG *</label>
+<label for="RG"><strong>RG *</strong></label>
   <input type="text" id="RG" name="RG" placeholder="digite o seu RG"required="required">
   </fieldset>
   </div>
@@ -68,44 +68,45 @@ Todos os campos marcados com (*) é de Preenchimento obrigatório.</p>
     <header>
 <h3>Segunda seção: endereço</h3>
     </header>
-<div>
+<div class="campo">
   <fieldset>
-  <label for="Cep">Cep * </label>
+  <label for="Cep"><strong>Cep *</strong> </label>
   <input type="text" id"Cep" name="Cep"required="required" onblur="pesquisacep(this.value)">
   </fieldset>
 </div>
-<div>
+<div class="campo">
   <fieldset>
-  <label for="rua"> Rua *</label>
+  <label for="rua"><strong>Rua *</strong> </label>
   <input type="text" id="rua" name="rua" placeholder="digite o Nome da rua ou avenida">
 </fieldset>
 </div>
-<div>
+<div class="campo">
   <fieldset>
-  <label for="numero"> Número * </label>
+  <label for="numero"><strong>Número * </strong></label>
   <input type="number" id="numero" name="numero" placeholder="úmero">
   </fieldset>
 </div>
-<div>
+<div class="campo">
   <fieldset>
-    <label for="Bairro"> Bairro * </label>
+    <label for="Bairro"><strong>Bairro * </strong></label>
   <input type="text" id="bairro" name="Bairro" placeholder="Bairro">
   </fieldset>
 </div>
-<div>
+<div class="campo">
   <fieldset>
-  <label for="Cidade"> Cidade * </label>
+  <label for="Cidade"><strong>Cidade *</strong> </label>
   <input type="text" id="cidade" name="Cidade" placeholder="insira a Cidade">
 </fieldset>
 </div>
-<div>
+<div class="campo">
   <fieldset>
-  <label for="Estado"> Estado*  </label>
+  <label for="Estado"><strong>Estado* </strong></label>
   <input type="text" id="estado" name="Estado" placeholder="digite o Estado">
 </fieldset>
 </div>
+<div class="campo">
 <fieldset>
-  <label for="IBGE"> IBGE </label>
+  <label for="IBGE"><strong>IBGE </strong> </label>
   <input type="text" id="IBGE" name="IBGE">
 </fieldset>
 </div>
@@ -114,9 +115,9 @@ Todos os campos marcados com (*) é de Preenchimento obrigatório.</p>
     <header>
 <h3>Terceira seção: dados complementares:</h3>
 </header>
-<div>
+<div class="group">
   <fieldset>
-  <label for="formação"> Qual é sua formação? </label>
+  <label for="formação"><strong>Qual é sua formação? </strong></label>
   <select id="formação" name="formação">
   <option id=" name= id="ensino fundamental incompleto">ensino fundamental incompleto</option>
  <option id="ensino fundamental completo">ensino fundamental completo</option>
@@ -127,71 +128,76 @@ Todos os campos marcados com (*) é de Preenchimento obrigatório.</p>
   </select>
 </fieldset>
 </div>
-<div>
+<div class="group">
   <fieldset>
-  <label for="deficiência"> É pessoa com deficiência?</label>
+  <label for="deficiência"><strong>É pessoa com deficiência?</strong></label>
   <select id="deficiência" name="deficiência">
     <option id="sim">sim</option>
   <option id="não">não</option>
   </select>
   </fieldset>
  </div>
-<div>
+<div class="group">
   <fieldset>
-  <label for="Deficiência">Se sim, marque o tipo da Deficiência </label>
+  <label for="Deficiência"><strong>Se sim, marque o tipo da Deficiência </strong> </label>
 <select id="Deficiência" name="Deficiência">
   <option id="Deficiência auditiva">Deficiência auditiva</option>
   <option id="deficiência física">deficiência física</option>
   <option id="deficiência intelectual">deficiência intelectual</option>
   <option id="deficiência visual">deficiência visual</option>
-  <option id="outras deficiências">outras deficiências>/option>
+  <option id="outras deficiências">outras deficiências</option>
 </select>
   </fieldset>
 </div>
-    <div>
+    <div class="btn-format">
       <fieldset>
-<label for="laudo"> Insira seu laudo </label>
-<input type="file" id="arquivo" name="arquivo"multiple>
+<label for="laudo"><strong>Insira seu laudo </strong></label>
+<input type="file" class="btn-format" id="arquivo" name="arquivo"multiple>
 </fieldset>
 </div>
-<div>
+<div class="group">
   <fieldset>
-<label for="experiência"> Possui alguma experiência profissional? </label>
+<label for="experiência"><strong>Possui alguma experiência profissional? </strong></label>
 <select id="experiência" name="experiência">
   <option id="sim">sim</option>
   >option id="não">não</option>
 </select>
 </fieldset>
 </div>
-<div>
+<div class="btn-format">
   <fieldset>
-<label for="currículo"> Ensira seu currículo.</label>
-<input type="file" id="arquivo" name="arquivo" multiple>
+<label for="currículo"><strong>Ensira seu currículo </strong> </label>
+<input type="file" class="btn-format" id="arquivo" name="arquivo" multiple>
 </fieldset>
 </div>
   </section>
   <section>
     <header>
-  <h3>Quarta seção: Contato</h3>
+  <h3 subtitulo>Quarta seção: Contato</h3>
     </header>
-  <div>
+  <div class="campo">
     <fieldset>
-<label for="telefone"> Telefone celular * </label>
+<label for="telefone"><strong>Telefone celular * </strong> </label>
 <input type="tel" id="telefone celular" name="telefone celular" placeholder=  "telefone" required="required" minlength="="9" maxlength="="9">
 </fieldset>
   </div>
-<div>
+<div class="campo">
   <fieldset>
-<label for="email"> E-mail *</label>
+<label for="email"><strong>E-mail *</strong></label>
 <input type="text" id="email" name="email" placeholder="digite seu e-mail no formato xxx@exemplo.com">
 </fieldset>
 </div>
-<input name="enviar" id="enviar" type="submit" onclick="return validar();">
-<input name="limpar" id="limpar" type="reset">
+<input name="enviar" id="enviar" type="submit" class="btn-send" onclick="return validar();">
+<input name="limpar" id="limpar" type="reset" class="btn-format">
 </form>
 </div>
 </section>
     </main>
+    <footer>
+    <p>
+      querotrabalhar.com. Todos os direitos reservados.
+    </p>
+    </footer>
 </body>
 <script src="js/dados.js"></script>
 </html>

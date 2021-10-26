@@ -1,0 +1,56 @@
+/*
+* Documento css da página
+* Autora: Alinne Luna
+* Definindo formatação dos cabeçalhos
+*/
+
+h1 {
+    font-family: sans-serif;
+    color: blue;
+    margin-left: 7%;
+}
+
+section h3{
+    font-family: sans-serif;
+    color: blue;
+    border: 0;
+}
+
+    footer {
+        font-family: sans-serif;
+        background-color: blue;
+        color: orange;
+        margin-left: 7%;
+    }
+
+    body {
+        margin-top: auto;
+        margin-botton: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .campo {
+        border: 5;
+        color: black;
+    }
+    .group {
+        border: 7;
+    }
+
+    .formulario {
+        border: 5;
+        background-color: orange;
+    }
+
+    .btn-format {
+        border: 7;
+        color: black;
+        background-color: black;
+    }
+
+    .btn-send {
+        border: 7;
+        color: green;
+        background-color: green;
+    }
